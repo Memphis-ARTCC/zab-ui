@@ -132,20 +132,20 @@ export default {
 
 			if(this.milestones) {
 				const minorPrerequisites = ["obs", "gnd", "twr", "app"];
-				const majorPrerequisites = ["obs", "gnd", "p50gnd", "p50twr", "p50app"];
+				const majorPrerequisites = ["obs", "gnd", "memgnd", "memtwr", "memapp"];
 
 				let milestonesShowed = this.milestones.filter((milestone) => {
-					if(this.user.data.vis) return (milestone.certCode.substring(0, 3) === "vis" && milestone.rating <= rating) || milestone.code === "GT1";
+					if(this.user.data.vis) return (milestone.code.substring(0, 3) === "vis" && milestone.rating <= rating) || milestone.code === "GT1";
 					else {
-						return (  // This is still slightly hard to understand.  It returns the milestones that haven't been completed yet for the rating, or the P50 equivelant (if no major cert has been attained yet) and next rating's milestones, or center milestones if all other certs have been attained.
-							!certs.includes(milestone.certCode) &&
+						return (  // This is still slightly hard to understand.  It returns the milestones that haven't been completed yet for the rating, or the mem equivelant (if no major cert has been attained yet) and next rating's milestones, or center milestones if all other certs have been attained.
+							!certs.includes(milestone.code) &&
 							(
 								milestone.code === "GT1" ||
-								(milestone.certCode.substring(0, 3) === "p50" && certs.includes(milestone.certCode.slice(-3)) && certs.includes(majorPrerequisites[milestone.rating - 1])) || 
-								(milestone.certCode.substring(0, 3) !== "p50" && (certs.includes(minorPrerequisites[milestone.rating - 1]) || (milestone.rating === "1" && certs.length === 0)) && milestone.certCode !== "zab") ||
-								(milestone.certCode === "zab" && certs.includes("p50app"))
-							) && 
-							milestone.certCode.substring(0, 3) !== "vis"
+								(milestone.code.substring(0, 3) === "mem" && certs.includes(milestone.code.slice(-3)) && certs.includes(majorPrerequisites[milestone.rating - 1])) ||
+								(milestone.code.substring(0, 3) !== "mem" && (certs.includes(minorPrerequisites[milestone.rating - 1]) || (milestone.rating === "1" && certs.length === 0)) && milestone.code !== "zme") ||
+								(milestone.code === "zme" && certs.includes("mem_app"))
+							) &&
+							milestone.code.substring(0, 3) !== "vis"
 						);
 					}
 				});

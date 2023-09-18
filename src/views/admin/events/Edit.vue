@@ -44,7 +44,7 @@
 										</li>
 									</ul>
 									<form @submit.prevent="addPosition">
-										<input type="text" class="positions_input" placeholder="ABQ_CTR" name="pos" ref="pos" required />
+										<input type="text" class="positions_input" placeholder="ZME_CTR" name="pos" ref="pos" required />
 										<button class="positions_submit" type="submit" name="action">
 											<i class="material-icons">add</i>
 										</button>

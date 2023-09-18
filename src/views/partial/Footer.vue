@@ -6,7 +6,7 @@
 				<p>This site works best in Google Chrome, Mozilla Firefox, and Microsoft Edge.</p>
 				<p>If you are still using Internet Explorer, please consider switching to a more modern browser.</p>
 			</div>
-			<img src="https://zabartcc.sfo3.digitaloceanspaces.com/images/zab_logo.png" alt="" draggable="false" height="70" width="70">
+			<img src="https://memphis-artcc.nyc3.digitaloceanspaces.com/images/zme_logo.png" alt="" draggable="false" height="70" width="70">
 		</div>
 		<div class="footer_pride">
 			<div class="wrapper">
@@ -17,26 +17,26 @@
 					<div class="pan_flag"></div>
 				</div>
 				<a href="#lgbt_modal" class="modal-trigger">
-					The Albuquerque ARTCC stands with the LGBTQIA+ community on VATSIM
+					The Memphis ARTCC stands with the LGBTQIA+ community on VATSIM
 				</a>
 			</div>
 		</div>
 		<div class="footer-copyright">
 			<div class="wrapper">
-				<div class="text-lg font-bold copyright-text">Copyright &copy; <span id="full_year"></span> Albuquerque ARTCC</div>
+				<div class="text-lg font-bold copyright-text">Copyright &copy; <span id="full_year"></span> Memphis ARTCC</div>
 				<div class="hide-on-small-only">•</div>
 				<!-- Made with ♥ and (╯°□°）╯︵ ┻━┻ by Alexandra Robison and Daan Janssen. -->
 				<div><router-link to="/privacy-policy" class="white-text">Privacy Policy</router-link></div>
 				<div class="hide-on-small-only">•</div>
 				<div><span ref="zulu_time">{{ footerTime }}</span></div>
 				<div class="hide-on-small-only">•</div>
-				<p class="footer_notice">Open source on <a href="https://github.com/zabartcc" class="white-text" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+				<p class="footer_notice">Open source on <a href="https://github.com/memphis-artcc" class="white-text" target="_blank" rel="noopener noreferrer">GitHub</a></p>
 			</div>
 		</div>
 		<div id="lgbt_modal" class="modal">
 			<div class="modal-content">
 				<h5>We stand with the LGBTQIA+ community on VATSIM</h5>
-				<p>Albuquerque ARTCC displays the rainbow, transgender, bisexual, and pansexual flags as a show of solidarity with the LGBTQIA+ community on VATSIM. You are welcome here, and you have our support.</p>
+				<p>Memphis ARTCC displays the rainbow, transgender, bisexual, and pansexual flags as a show of solidarity with the LGBTQIA+ community on VATSIM. You are welcome here, and you have our support.</p>
 				<p>As an organization with LGBTQIA+ members, we recognize the importance of creating a welcoming environment to all members. Everyone is welcome here, regardless of their race, nationality, national origin, ethnicity, ethnic origin, socioeconomic status, religion, age, disability, sexual orientation, gender, or gender identity.</p>
 				<p>We recognize CZQO, CZWG, ZMA, ZNY, ZOA, ZOB and ZSE for displaying similar statements on their websites.</p>
 				<div class="modal_flags">

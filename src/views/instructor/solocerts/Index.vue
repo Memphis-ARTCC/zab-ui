@@ -9,7 +9,7 @@
 		<div class="card-content loading_container" v-if="loading">
 			<Spinner />
 		</div>
-		<p class="no_certs" v-else-if="!loading && !certs.length">There are no active solo certifications issued by ZAB</p>
+		<p class="no_certs" v-else-if="!loading && !certs.length">There are no active solo certifications issued by ZME</p>
 		<div class="table_wrapper" v-else>
 			<table class="striped">
 				<thead class="certs_list_head">
@@ -50,7 +50,7 @@ export default {
 	title: 'Solo Certifications',
 	data() {
 		return {
-			positions: ['ABQ', 'PHX', 'TUS', 'ELP', 'AMA'],
+			positions: ['FSM', 'BNA', 'MEM'],
 			certs: [],
 			controllers: null,
 			loading: true
@@ -60,7 +60,6 @@ export default {
 		await this.getSoloCerts();
 		await this.getControllers();
 		this.loading = false;
-		
 		M.Modal.init(document.querySelectorAll('.modal'), {
 			preventScrolling: false
 		});
@@ -97,14 +96,19 @@ export default {
 				this.$nextTick(() => {
 					M.Modal.getInstance(document.querySelector('.modal_delete')).close();
 				});
-				
 			} catch(e) {
 				this.toastError('Something went wrong, please try again');
 			}
 		},
 		getName(cid2) {
-			const controller = this.controllers.filter((i) => i.cid === cid2);
-			return controller[0].fname + ' ' + controller[0].lname;
+			try {
+				const controller = this.controllers.filter((i) => i.cid === cid2);
+				return controller[0].fname + ' ' + controller[0].lname;
+			}
+			catch(e) {
+				console.log(e);
+				return "Unknown";
+			}
 		}
 	}
 };

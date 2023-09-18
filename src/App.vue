@@ -2,7 +2,7 @@
 	<router-view v-if="hasQueryCompleted" />
 	<div v-else id="loading">
 		<div id="loading_box" class="z-depth-3">
-			<img src="https://zabartcc.sfo3.digitaloceanspaces.com/images/zab_logo.png" alt="">
+			<img src="https://memphis-artcc.nyc3.digitaloceanspaces.com/images/zme_logo.png" alt="">
 			<h3>Please Wait...</h3>
 			<Spinner/>
 		</div>

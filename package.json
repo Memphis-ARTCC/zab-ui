@@ -2,7 +2,7 @@
   "name": "ui",
   "version": "1.0.0",
   "private": true,
-  "author": "Albuquerque ARTCC",
+  "author": "Memphis ARTCC",
   "contributors": [
     "Alexandra Robison",
     "Daan Janssen"
@@ -20,9 +20,6 @@
   },
   "dependencies": {
     "@materializecss/materialize": "^1.1.0",
-    "@sentry/browser": "^6.19.7",
-    "@sentry/integrations": "^6.19.7",
-    "@sentry/tracing": "^6.19.7",
     "@toast-ui/editor": "^3.1.7",
     "@toast-ui/editor-plugin-table-merged-cell": "^3.0.2",
     "axios": "^0.27.2",

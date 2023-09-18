@@ -53,7 +53,7 @@
 									</div>
 									<div class="input-field col s12">
 										<p id="join_reason">{{app.reason}}</p>
-										<label for="join_reason" class="active">Why would you like to visit ZAB?</label>
+										<label for="join_reason" class="active">Why would you like to visit ZME?</label>
 									</div>
 								</div>
 							</div>

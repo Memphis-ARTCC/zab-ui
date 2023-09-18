@@ -19,18 +19,12 @@ const routes = [
       {
         path: "/login",
         beforeEnter() {
-          location.href = uriHelper.vatsimAuthRedirectUrl;
+          location.href = uriHelper.vatsimAuthRedirectUrlDev;
         },
       },
       {
         path: "/login/verify",
         component: () => import("../views/page/LoginVerify.vue"),
-      },
-      {
-        path: "/login/discord",
-        beforeEnter() {
-          location.href = uriHelper.discordRedirectUrl;
-        },
       },
       {
         path: "/connect/discord",
@@ -81,18 +75,6 @@ const routes = [
         component: () => import("../views/files/ViewDocument.vue"),
       },
       {
-        path: "/briefing",
-        component: () => import("../views/page/PilotBrief.vue"),
-      },
-      {
-        path: "/tanmac",
-        component: () => import("../views/page/Tanmac.vue"),
-      },
-      {
-        path: "/tanmac/pfr",
-        component: () => import("../views/page/TanmacPFR.vue"),
-      },
-      {
         path: "/privacy-policy",
         component: () => import("../views/page/PrivacyPolicy.vue"),
       },
@@ -133,14 +115,14 @@ const routes = [
         path: "solo/new",
         component: () => import("../views/instructor/solocerts/New.vue"),
       },
-      {
-        path: "training/requests",
-        component: () => import("../views/instructor/training/Requests.vue"),
-      },
-      {
-        path: "training/requests/:date",
-        component: () => import("../views/instructor/training/Day.vue"),
-      },
+      // {
+      //   path: "training/requests",
+      //   component: () => import("../views/instructor/training/Requests.vue"),
+      // },
+      // {
+      //   path: "training/requests/:date",
+      //   component: () => import("../views/instructor/training/Day.vue"),
+      // },
       {
         path: "training/sessions",
         component: () => import("../views/instructor/training/Sessions.vue"),
@@ -287,10 +269,6 @@ const routes = [
     ],
   },
   {
-    path: "/ids",
-    component: () => import("../views/page/Ids.vue"),
-  },
-  {
     path: "/:catchAll(.*)",
     component: Master,
     children: [
@@ -303,7 +281,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 

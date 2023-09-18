@@ -2,9 +2,9 @@
 	<div>
 		<div class="card home_intro">
 			<div class="card-content">
-				<span class="card-title">Welcome to Albuquerque ARTCC</span>
+				<span class="card-title">Welcome to Memphis ARTCC</span>
 				<p>
-					Hello, and welcome to the Albuquerque ARTCC. We are a group of aviation enthusiasts providing simulated ATC services, operating on the VATSIM network, the Americas region and the VATUSA division. The Albuquerque ARTCC covers most of Arizona and New Mexico as well as parts of Texas, Colorado and Oklahoma.
+					Welcome to the Memphis ARTCC. Memphis ARTCC is comprised of aviation enthusiasts from all around the world providing simulated Air Traffic Control services to pilots within our airspace using the VATSIM network. Memphis ARTCC includes most of Tennessee, Mississippi, and Arkansas.
 				</p>
 				<div class="visit" v-if="!user.isLoggedIn || (!user.data.vis && !user.data.isMem)">
 					<p>

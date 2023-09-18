@@ -8,7 +8,7 @@
 			<div v-else>
 				<span class="staff_member">Vacant</span>
 			</div>
-			<a :href="`mailto:${staffItem.code}@zabartcc.org`" class="staff_email"><i class="material-icons">email</i> {{ staffItem.code }}@zabartcc.org</a>
+			<a :href="`mailto:${staffItem.code}@memphisartcc.com`" class="staff_email"><i class="material-icons">email</i> {{ staffItem.code }}@memphisartcc.com</a>
 		</div>
 	</div>
 </template>

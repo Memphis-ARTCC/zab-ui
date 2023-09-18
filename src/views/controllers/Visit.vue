@@ -3,7 +3,7 @@
     <div class="card-content">
       <span class="card-title">Become a Visitor</span>
       <p v-if="!user.isLoggedIn">
-        Thank you for your interest in visiting the Albuquerque ARTCC. To apply
+        Thank you for your interest in visiting the Memphis ARTCC. To apply
         for visiting status, click the button below to login and continue.<br />
       </p>
       <p>
@@ -24,7 +24,7 @@
           staff team will review your application as soon as possible. In the
           meantime, if you have any questions or concerns, please don't hesitate
           to
-          <a class="mailto_link" href="mailto:datm@zabartcc.org"
+          <a class="mailto_link" href="mailto:datm@memphisartcc.com"
             >let the DATM know.</a
           >
         </p>
@@ -95,7 +95,7 @@
               <label for="home">Home ARTCC/FIR</label>
             </div>
             <div class="input-field col s12">
-              <label for="reason">Why would you like to visit ZAB?</label>
+              <label for="reason">Why would you like to visit ZME?</label>
               <textarea
                 id="reason"
                 class="materialize-textarea validate"
@@ -118,7 +118,7 @@
         <div v-else>
           <p>
             You cannot apply to become a visitor since you're already a member
-            of ZAB.
+            of ZME.
           </p>
         </div>
       </div>

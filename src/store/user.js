@@ -16,7 +16,7 @@ export default {
 				if(user.ret_det.code === 200) {
 					commit('setUser', user.data);
 					commit('setLoggedIn', true);
-				} 
+				}
 				if(user.ret_det.code === 403) {
 					console.error(user.ret_det.message);
 				}

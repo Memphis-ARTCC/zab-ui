@@ -1,9 +1,9 @@
-# Albuquerque ARTCC - UI
-A Vue SPA for the Albuquerque ARTCC Website. This communicates with the ZAB API in order to deliver content to users.
+# Memphis ARTCC - UI
+A Vue SPA for the Memphis ARTCC Website. This communicates with the ZAB API in order to deliver content to users.
 
 ## License
 
-The Albuquerque ARTCC website is hereby released under the Creative Commons CC BY-NC-SA 4.0 license. Please ensure you are familiar with the license before contributing to this project. A couple of key takeaways:
+The Memphis ARTCC website is hereby released under the Creative Commons CC BY-NC-SA 4.0 license. Please ensure you are familiar with the license before contributing to this project. A couple of key takeaways:
 
 1. If you choose to share or alter this project, you **MUST** give credit to the contributors of this project.
 2. You may **NOT** use any of this project for commercial purposes.

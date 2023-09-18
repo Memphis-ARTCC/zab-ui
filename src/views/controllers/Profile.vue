@@ -11,7 +11,7 @@
 					<div class="row">
 						<div class="col s5 m4 l3">
 							<div class="controller_image">
-								<img :src="`https://zabartcc.sfo3.digitaloceanspaces.com/avatars/${controller.avatar || `${controller.cid}-default.png`}`" alt="" height="170" width="170">
+								<img :src="`https://memphis-artcc.nyc3.digitaloceanspaces.com/avatars/${controller.avatar || `${controller.cid}-default.png`}`" alt="" height="170" width="170">
 							</div>
 						</div>
 						<div class="col s7 m8 l9">
@@ -135,7 +135,7 @@ export default {
 				if(cert.class === "major" || cert.class === "center") certsToShow.push(cert);
 				else {
 					const certPos = cert.code.slice(-3);
-					if(!hasCerts.includes(`p50${certPos}`)) {
+					if(!hasCerts.includes(`mem${certPos}`)) {
 						certsToShow.push(cert);
 					}
 				}

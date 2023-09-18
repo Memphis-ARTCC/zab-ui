@@ -1,15 +1,15 @@
 <template>
   <header>
-    <div id="header_hero" :class="`hero${number === 69 ? '_aprilfools' : '6'}`">
+    <div id="header_hero" :class="`hero${number}`">
       <div class="wrapper">
         <div>
           <router-link to="/"
-            ><h1>ALBUQUERQUE<span>ARTCC</span></h1></router-link
+            ><h1>MEMPHIS<span>ARTCC</span></h1></router-link
           >
         </div>
         <router-link to="/"
           ><img
-            src="https://zabartcc.sfo3.digitaloceanspaces.com/images/zab_logo.png"
+            src="https://memphis-artcc.nyc3.digitaloceanspaces.com/images/zme_logo.png"
             alt=""
             draggable="false"
             height="125"
@@ -125,7 +125,7 @@
                 v-if="user.isLoggedIn && (user.data.isIns || user.data.isStaff)"
               >
                 <a
-                  href="https://sunport.zabartcc.org/mail/"
+                  href="https://mail.ionos.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Webmail</a
@@ -223,7 +223,7 @@ export default {
     ...mapState("user", ["user"]),
   },
   async mounted() {
-    this.number = Math.floor(Math.random() * 200);
+    this.number = Math.floor(Math.random() * 5);
     M.Dropdown.init(document.querySelectorAll(".dropdown-right"), {
       alignment: "right",
       coverTrigger: false,
@@ -267,32 +267,20 @@ export default {
   }
 
   &.hero1 {
-    background-image: url("@/assets/images/hero/grand_canyon.jpg");
-    background-position: top 20% center;
+    background-image: url("@/assets/images/hero/memphis.jpg");
+    background-position: top 40% center;
   }
 
   &.hero2 {
-    background-image: url("@/assets/images/hero/scaled/camelback.jpg");
+    background-image: url("@/assets/images/hero/memphis2.jpg");
   }
 
   &.hero3 {
-    background-image: url("@/assets/images/hero/saguaro.jpg");
+    background-image: url("@/assets/images/hero/nashville.jpg");
   }
 
   &.hero4 {
-    background-image: url("@/assets/images/hero/abq.jpg");
-  }
-
-  &.hero5 {
-    background-image: url("@/assets/images/hero/cactus.jpg");
-  }
-
-  &.hero6 {
-    background-image: url("@/assets/images/hero/sandias.jpg");
-  }
-
-  &.hero_aprilfools {
-    background-image: url("@/assets/images/hero/bb.jpg");
+    background-image: url("@/assets/images/hero/nasville2.jpg");
   }
 
   .wrapper {

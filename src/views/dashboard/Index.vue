@@ -15,27 +15,16 @@
 					</span>
 				</div>
 				<span class="section_title">
-					<br>IDS Token
-				</span>
-				<div class="hidden" id="token_wrap">
-					<code>{{ token }}</code>
-					<span class="generate right" @click="generateToken">
-						<i class="material-icons">refresh</i>
-					</span>
-					<div id="click_to_see" @click="showToken">Click to view</div>
-				</div>
-				<span class="section_title">
 					External Integrations
 				</span>
 				<div class="discord_connect">
-						<button class="btn waves-effect waves-light">
-							<a href="https://www.vatusa.net/my/profile" class="discord_text">Link Discord</a>
-						<img src="@/assets/images/discord.svg" alt="" draggable="false" class="discord_logo" height="24">	
-					</button>
 					<button class="btn-flat waves-effect">
-						<a href="https://vats.im/zabdiscord" target="_blank" rel="noreferrer noopener">Join Discord</a>
+						<a href="https://discord.gg/ugb2uSvW7Y" target="_blank" rel="noreferrer noopener">Join Discord</a>
 					</button>
-				</div>	
+					<span>
+						Teamspeak: 165.22.10.83 password: zmerocks
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -75,24 +64,15 @@ export default {
 	title: 'Dashboard',
 	data() {
 		return {
-			approvedAirports: ['ABQ', 'PHX', 'TUS', 'AMA', 'ELP', 'DMA', 'DVT', 'SDL', 'FFZ', 'CHD', 'IWA', 'GEU', 'GYR', 'LUF', 'PRC', 'FLG'],
-			token: '',
+			approvedAirports: ["BNA", "FSM", "HSV", "JAN", "LIT", "CBM", "HOP", "NMM", "ASG", "CGI", "EOD", "FYV", "GLH", "GTR", "GWO", "HKS", "HUA", "JWN", "MEI", "MEM", "MKL", "MQY", "NJW", "NQA", "OLV", "PAH", "ROG", "TUP", "XNA"],
 			discordConnected: false,
 			controllingSessions: null,
 		};
 	},
 	async mounted() {
-		this.token = this.user.data.idsToken || 'None Set';
 		await this.getControllingSessions();
 	},
 	methods: {
-		async generateToken() {
-			const { data: tokenRet } = await zabApi.post('/user/idsToken');
-			if(tokenRet.ret_det.code === 200) {
-				this.toastSuccess('Token successfully generated');
-				this.token = tokenRet.data;
-			} else this.toastError(tokenRet.ret_det.message);
-		},
 		async getControllingSessions() {
 			const { data: sessionData } = await zabApi.get('/user/sessions');
 			this.controllingSessions = sessionData.data;

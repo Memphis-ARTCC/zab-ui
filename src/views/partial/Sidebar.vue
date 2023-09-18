@@ -101,7 +101,7 @@ export default {
 			updateTime: '',
 			atcOnline: null,
 			ratings: null,
-			airports: ["KPHX", "KABQ", "KTUS", "KAMA", "KROW", "KELP", "KSDL", "KCHD", "KFFZ", "KIWA", "KDVT", "KGEU", "KGYR", "KLUF", "KRYN", "KDMA", "KFLG", "KPRC", "KAEG", "KBIF", "KHMN", "KSAF", "KFHU"],
+			airports: ["KBNA", "KFSM", "KHSV", "KJAN", "KLIT", "KCBM", "KHOP", "KNMM", "KASG", "KCGI", "KEOD", "KFYV", "KGLH", "KGTR", "KGWO", "KHKS", "KHUA", "KJWN", "KMEI", "KMEM", "KMKL", "KMQY", "KNJW", "KNQA", "KOLV", "KPAH", "KROG", "KTUP", "KXNA"],
 			top: null
 		};
 	},
