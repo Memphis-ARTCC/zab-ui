@@ -5,19 +5,7 @@ import path from "path";
 export default defineConfig({
   plugins: [vue()],
   server: {
-    port: 8080,
-    proxy: {
-      "^/devapi": {
-        target: "http://localhost:3000",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/devapi/, "/"),
-      },
-      "/vatusa": {
-        target: "https://api.vatusa.net/v2",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/vatusa/, "/"),
-      },
-    },
+    port: 8080
   },
   resolve: {
     alias: [
@@ -30,7 +18,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/assets/css/styles";`,
+        additionalData: `@import "./src/assets/css/styles.scss";`,
       },
     },
   },
