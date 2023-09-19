@@ -29,13 +29,11 @@
           <form>
             <div class="row row_no_margin" v-show="step === 1">
               <div class="input-field col s12 m6">
-                <input
-                  id="student"
-                  type="text"
-                  required
-                  disabled
-                />
-                <label for="student" class="active">Student Name</label>
+                <select v-model="form.cid" required class="materialize-select">
+                  <option value="" disabled selected>Select a controller</option>
+                  <option v-for="controller in controllers" :value="controller.cid" :key="controller.cid">{{ controller.fname }} {{ controller.lname }}</option>
+                </select>
+                <label>Controller</label>
               </div>
               <div class="input-field col s12 m6">
                 <input
@@ -230,7 +228,7 @@
   import { vatusaApiAuth, zabApi } from "@/helpers/axios.js";
   import dayjs from "dayjs";
   export default {
-    name: "EditSessionNotes",
+    name: "SessionNotes",
     title: "Enter Session Notes",
     data() {
       return {
@@ -245,13 +243,22 @@
         margin: 0,
       });
       M.CharacterCounter.init(document.querySelectorAll("textarea"), {});
+      this.session = {};
     },
     methods: {
+      async getControllers() {
+        const { data } = await zabApi.get('/feedback/controllers');
+        this.controllers = data.data.map((c) => ({
+          cid: c.cid,
+          name: `${c.fname} ${c.lname}`,
+        }));
+      },
       async saveForm() {
         try {
           const { data } = await zabApi.put(
             `/training/session/new/${this.$route.params.id}`,
             {
+              cid: this.session.student.cid,
               position: this.session.position,
               movements: this.session.movements,
               progress: this.session.progress,

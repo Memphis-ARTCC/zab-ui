@@ -11,7 +11,7 @@
 						<div class="card stats_card">
 							<div class="card-content">
 								<h6>Students Longest in Queue</h6>
-								<p class="center">Students listed in bold have never had a session, so their last request is displayed instead.</p>
+								<p class="center">Students listed in bold have never had a session.</p>
 							</div>
 							<div class="table_wrapper">
 								<table class="striped compact">
@@ -19,8 +19,8 @@
 										<tr>
 											<th>Student</th>
 											<th>Rating</th>
-											<th>Last Session Date/Request</th>
-											<th>Last Milestone/Request</th>
+											<th>Last Session Date</th>
+											<th>Last Milestone</th>
 										</tr>
 									</thead>
 									<tbody>

@@ -19,7 +19,7 @@
 							<label>Controller</label>
 						</div>
 						<div class="col s12 input-field">
-							<input id="position" type="text" minlength=7 maxlength=7 class="validate" placeholder="PHX_APP" v-model="form.position" required>
+							<input id="position" type="text" minlength=7 maxlength=7 class="validate" placeholder="MEM_APP" v-model="form.position" required>
 							<label for="position" class="active">Position</label>
 						</div>
 						<div class="col s12 input-field">

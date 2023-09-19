@@ -2,6 +2,7 @@
 	<div class="card">
 		<div class="card-content">
 			<div class="card-title">Completed Training Sessions</div>
+			<a class="btn" href="/ins/training/session/new">New Session</a>
 		</div>
 		<div v-if="!sessions" class="loading_container">
 			<Spinner />
