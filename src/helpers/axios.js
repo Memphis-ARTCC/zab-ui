@@ -1,7 +1,5 @@
 import axios from "axios";
 
-console.log(import.meta.env);
-
 export const zabApi = axios.create({
   baseURL: import.meta.env.VITE_API_URL ?? "https://api.memphisartcc.com",
   withCredentials: true,
