@@ -138,7 +138,7 @@ const routes = [
       },
       {
         path: "training/session/new",
-        component: () => import("../views/instructor/training/NewsSession.vue"),
+        component: () => import("../views/instructor/training/NewSession.vue"),
       },
       {
         path: "training/session/:id",
