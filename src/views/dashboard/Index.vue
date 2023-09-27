@@ -8,7 +8,7 @@
 			<div v-else>
 				<div class="hours_info">
 					<span>
-						You have controlled for <b>{{ hoursCalc }}</b> in the past 60 days.
+						You have controlled for <b>{{ hoursCalc }}</b> in the past 30 days.
 					</span>
 					<span v-if="user.data.rating !== 1">
 						You will need to control again by <b>{{ calcControlDate }}</b> to prevent removal from the roster.
@@ -106,7 +106,7 @@ export default {
 		hoursCalc() {
 			let seconds = 0;
 			for(const session of this.controllingSessions) {
-				if((Math.abs(new Date().getTime() - new Date(session.timeEnd).getTime()) / (1000 * 60 * 60 * 24) < 61)) {
+				if((Math.abs(new Date().getTime() - new Date(session.timeEnd).getTime()) / (1000 * 60 * 60 * 24) < 31)) {
 					const newSeconds = (new Date(session.timeEnd) - new Date(session.timeStart)) / 1000;
 					seconds += newSeconds;
 				}
@@ -129,7 +129,7 @@ export default {
 				}
 			}
 
-			date.setUTCDate(date.getUTCDate() + 61);
+			date.setUTCDate(date.getUTCDate() + 31);
 			return this.formatDate(date);
 		}
 	}
