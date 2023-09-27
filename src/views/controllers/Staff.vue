@@ -78,11 +78,11 @@ f<template>
 						<div class="col s12 l4 card-distance-trainigstaff ">
 							<StaffCard :staffItem="staff.ata" />
 						</div>
-						<!-- the middle line between position ATA and TA  -->
-						<div class="col s6 push-s1 border_middle hide-on-med-and-down"></div>
 						<div class="col s12 l5 card-distance-trainigstaff">
 							<StaffCard :staffItem="staff.ta" />
 						</div>
+						<!-- the middle line between position ATA and TA  -->
+						<div class="col s6 push-s1 border_middle hide-on-med-and-down"></div>
 					</div>
 					<div class="row">
 						<div class="col s7 push-s1 border_right hide-on-med-and-down"></div>

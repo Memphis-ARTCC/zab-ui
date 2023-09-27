@@ -142,11 +142,12 @@
   </template>
   <script>
   import { zabApi } from "@/helpers/axios.js";
+  import { mapState } from 'vuex';
   import flatpickr from 'flatpickr';
   import 'flatpickr/dist/flatpickr.min.css';
   export default {
     name: "SessionNotes",
-    title: "Enter Session Notes",
+    title: "Enter Session Details",
     data() {
       return {
         controllers: null,
