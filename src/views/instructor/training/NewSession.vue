@@ -31,7 +31,7 @@
                 </select>
                 <label>Milestone</label>
               </div>
-              <div class="input-field col s12 m6 position">
+              <div class="input-field col s12 m6">
                 <input
                   id="position"
                   type="text"
