@@ -5,7 +5,7 @@
         <div class="session_notes">
           <form>
             <div class="row row_no_margin">
-              <div class="input-field col s12 m6 center">
+              <div class="input-field col s12 m6 push-l4">
                 <select v-model="form.studentCid" required class="materialize-select">
                   <option value="" disabled selected>Select a controller</option>
                   <option v-for="controller in controllers" :value="controller.cid" :key="controller.cid">{{ controller.fname }} {{ controller.lname }}</option>
@@ -235,89 +235,10 @@
       cursor: pointer;
     }
   }
-  
+
   .submit_buttons {
     input {
       margin-left: 0.5em;
     }
   }
-  
-  .stepper {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em 0;
-  
-    .step {
-      background: lightgray;
-      font-weight: 600;
-      text-shadow: 1px 1px gray;
-      color: #fff;
-      height: 2.5em;
-      width: 2.5em;
-      padding: 0.45em 0.92em;
-      border-radius: 50%;
-      transition: 0.3s ease;
-  
-      &.active {
-        background: $primary-color-light;
-        text-shadow: 1px 1px $primary-color;
-      }
-    }
-  
-    .stepper_divider {
-      flex-grow: 1;
-      height: 1px;
-      margin-left: 1em;
-      margin-right: 1em;
-      margin-top: 1.25em;
-      background: lightgray;
-    }
-  }
-  
-  #start_time,
-  #end_time {
-    .date {
-      margin-top: 0.5em;
-      height: 2.3rem;
-      padding-top: 0.3em;
-      border-bottom: 1px solid #9e9e9e;
-      font-size: 16px;
-      line-height: 1.15;
-    }
-  
-    .controls {
-      height: 15px;
-      margin-top: -2.5em;
-      margin-left: calc(100% - 20px);
-  
-      div:first-child {
-        margin-top: -5px;
-      }
-  
-      div:not(:first-child) {
-        margin-top: 0px;
-      }
-  
-      div {
-        cursor: pointer;
-        user-select: none;
-        height: 15px;
-        margin-top: -10px;
-      }
-    }
-  }
-  
-  .milestone,
-  .position {
-    margin-top: 3em;
-  }
-
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   </style>
-  

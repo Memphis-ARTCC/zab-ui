@@ -75,7 +75,7 @@ f<template>
 				<div v-else>
 					<!-- TRANING STAFF ROW  -->
 					<div class="row">
-						<div class="col s12 l5">
+						<div class="col s12 l4 push-l4">
 							<StaffCard :staffItem="staff.ta" />
 						</div>
 					</div>
