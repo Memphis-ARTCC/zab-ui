@@ -69,7 +69,7 @@ f<template>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col s1 push-s2 border_left hide-on-med-and-down"></div>
+						<div class="col s1 push-s3 border_left hide-on-med-and-down"></div>
 						<div class="col s4 push-l4 border_right hide-on-med-and-down"></div>
 					</div>
 					<div class="row">
