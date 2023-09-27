@@ -75,14 +75,17 @@ f<template>
 				<div v-else>
 					<!-- TRANING STAFF ROW  -->
 					<div class="row">
-						<div class="col s12 l4 card-distance-trainigstaff ">
-							<StaffCard :staffItem="staff.ata" />
-						</div>
 						<div class="col s12 l5 card-distance-trainigstaff">
 							<StaffCard :staffItem="staff.ta" />
 						</div>
-						<!-- the middle line between position ATA and TA  -->
-						<div class="col s6 push-s1 border_middle hide-on-med-and-down"></div>
+					</div>
+					<div class="row">
+						<div class="col s1 push-s5 border_right hide-on-med-and-down"></div>
+					</div>
+					<div class="row">
+						<div class="col s12 l4 push-l4 card-distance-trainigstaff ">
+							<StaffCard :staffItem="staff.ata" />
+						</div>
 					</div>
 					<div class="row">
 						<div class="col s7 push-s1 border_right hide-on-med-and-down"></div>
@@ -107,7 +110,6 @@ f<template>
 			</div>
 		</div>
 	</div>
-	
 </template>
 
 <script>

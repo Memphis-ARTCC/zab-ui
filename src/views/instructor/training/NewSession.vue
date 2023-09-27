@@ -12,6 +12,8 @@
                 </select>
                 <label>Controller</label>
               </div>
+            </div>
+            <div class="row row_no_margin">
               <div class="input-field col s12 m6">
                 <input id="start_time" type="text" class="datepicker" ref="startTime" required>
                 <label for="start_time" class="active">Start Time (Zulu)</label>
@@ -20,7 +22,9 @@
                 <input id="end_time" type="text" class="datepicker" ref="endTime" required>
                 <label for="end_time" class="active">End Time (Zulu)</label>
               </div>
-              <div class="input-field col s12 m6 milestone">
+            </div>
+            <div class="row row_no_margin">
+              <div class="input-field col s12 m6">
                 <select v-model="form.milestone" required class="materialize-select">
                   <option value="" disabled selected>Select a milestone</option>
                   <option v-for="milestone in milestones" :value="milestone.code" :key="milestone.code">{{ milestone.name }}</option>
@@ -50,6 +54,18 @@
                 <label for="movements" class="active">Movements</label>
               </div>
               <div class="input-field col s12 m6">
+                <select required v-model="form.ots" class="materialize-select">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="0">No OTS</option>
+                  <option value="1">OTS Pass</option>
+                  <option value="2">OTS Fail</option>
+                  <option value="3">OTS Recommended</option>
+                </select>
+                <label>OTS</label>
+              </div>
+            </div>
+            <div class="row row_no_margin">
+              <div class="input-field col s12 m6">
                 <select
                   required
                   v-model="form.location"
@@ -76,16 +92,6 @@
                   <option value="5">Exceptional Progress</option>
                 </select>
                 <label>Progress</label>
-              </div>
-              <div class="input-field col s12 m6">
-                <select required v-model="form.ots" class="materialize-select">
-                  <option value="" disabled selected>Select an option</option>
-                  <option value="0">No OTS</option>
-                  <option value="1">OTS Pass</option>
-                  <option value="2">OTS Fail</option>
-                  <option value="3">OTS Recommended</option>
-                </select>
-                <label>OTS</label>
               </div>
             </div>
             <div class="row row_no_margin">
