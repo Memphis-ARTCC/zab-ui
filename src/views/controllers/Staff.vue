@@ -28,7 +28,7 @@ f<template>
 						<div class="col s12 l4 push-l4">
 							<StaffCard :staffItem="staff.datm" />
 						</div>
-						<div class="col s12 l4 pull-l4 cardta">
+						<div class="col s12 l4 pull-l4">
 							<StaffCard :staffItem="staff.ta" />
 						</div>
 						<div class="col s12 l4">
@@ -37,6 +37,7 @@ f<template>
 					</div>
 					<div class="row">
 						<div class="col s1 push-s1 border_long2 hide-on-med-and-down"></div>
+						<div class="col s5 hide-on-med-and-down"></div>
 						<div class="col s4 border_right hide-on-med-and-down"></div>
 					</div>
 					<div class="row">
@@ -56,6 +57,7 @@ f<template>
 					</div>
 					<div class="row">
 						<div class="col s1 push-s3 border_left hide-on-med-and-down"></div>
+						<div class="col s5 hide-on-med-and-down"></div>
 						<div class="col s4 push-s4 border_right hide-on-med-and-down"></div>
 					</div>
 					<div class="row">
