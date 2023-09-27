@@ -81,12 +81,15 @@
 							<span id="atm" class="cert cert_senior" :class="{active: form.roles.atm}" @click="toggleRole">ATM</span>
 							<span id="datm" class="cert cert_senior" :class="{active: form.roles.datm}" @click="toggleRole">DATM</span>
 							<span id="ta" class="cert cert_senior" :class="{active: form.roles.ta}" @click="toggleRole">TA</span>
+							<span id="ata" class="cert cert_training" :class="{active: form.roles.ata}"  @click="toggleRole">ATA</span>
 							<span id="ec" class="cert cert_junior" :class="{active: form.roles.ec}" @click="toggleRole">EC</span>
+							<span id="aec" class="cert cert_junior" :class="{active: form.roles.aec}" @click="toggleRole">AEC</span>
 							<span id="fe" class="cert cert_junior" :class="{active: form.roles.fe}" @click="toggleRole">FE</span>
+							<span id="afe" class="cert cert_junior" :class="{active: form.roles.afe}" @click="toggleRole">AFE</span>
 							<span id="wm" class="cert cert_junior" :class="{active: form.roles.wm}" @click="toggleRole">WM</span>
+							<span id="awm" class="cert cert_junior" :class="{active: form.roles.awm}" @click="toggleRole">AWM</span>
 							<span id="ins" class="cert cert_training" :class="{active: form.roles.ins}"  @click="toggleRole">INS</span>
 							<span id="mtr" class="cert cert_training" :class="{active: form.roles.mtr}"  @click="toggleRole">MTR</span>
-							<span id="ata" class="cert cert_training" :class="{active: form.roles.ata}"  @click="toggleRole">ATA</span>
 							<span id="vis" class="cert cert_training" :class="{active: form.vis}"  @click="toggleVis">VIS</span>
 						</div>
 					</div>
@@ -116,7 +119,7 @@ export default {
 				oi: '',
 				vis: false,
 				certs: {
-					zab: false,
+					zme: false,
 					memapp: false,
 					memtwr: false,
 					memgnd: false,
@@ -128,9 +131,13 @@ export default {
 					atm: false,
 					datm: false,
 					ta: false,
+					ata: false,
 					ec: false,
+					aec: false,
 					fe: false,
+					afe: false,
 					wm: false,
+					awm: false,
 					ins: false,
 					mtr: false,
 				},
@@ -153,7 +160,6 @@ export default {
 				oi: this.controller.oi,
 				vis: this.controller.vis,
 			};
-			
 			this.controller.certifications.forEach(cert => this.form.certs[cert.code] = true);
 			this.controller.roles.forEach(role => this.form.roles[role.code] = true);
 			this.usedOi = (await zabApi.get(`/controller/oi`)).data.data;
@@ -182,7 +188,6 @@ export default {
 					const {data} = await zabApi.put(`/controller/${this.controller.cid}`, {
 						form: this.form
 					});
-	
 					if(data.ret_det.code === 200) {
 						this.toastSuccess('Controller updated');
 					} else {

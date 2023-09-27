@@ -9,7 +9,7 @@
 				Controllers
 				<div class="secondary-content"><i class="material-icons">people</i></div>
 			</router-link>
-			<router-link to="/admin/activity" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta', 'wm'])">
+			<router-link to="/admin/activity" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta', 'ata', 'wm'])">
 				Controller Activity
 				<div class="secondary-content"><i class="material-icons">assessment</i></div>
 			</router-link>
@@ -21,11 +21,11 @@
 				Downloads
 				<div class="secondary-content"><i class="material-icons">insert_drive_file</i></div>
 			</router-link>
-			<router-link to="/admin/events" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta', 'ec'])">
+			<router-link to="/admin/events" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta', 'ec', 'aec'])">
 				Events
 				<div class="secondary-content"><i class="material-icons">event</i></div>
 			</router-link>
-			<router-link to="/admin/feedback" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta'])">
+			<router-link to="/admin/feedback" class="collection-item" v-if="requiresAuth(['atm', 'datm', 'ta', 'ata'])">
 				Feedback
 				<div class="secondary-content"><i class="material-icons">feedback</i></div>
 			</router-link>
