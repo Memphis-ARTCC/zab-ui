@@ -223,7 +223,7 @@ export default {
     ...mapState("user", ["user"]),
   },
   async mounted() {
-    this.number = Math.floor(Math.random() * 5);
+    this.number = Math.floor(Math.random() * 4) + 1;
     M.Dropdown.init(document.querySelectorAll(".dropdown-right"), {
       alignment: "right",
       coverTrigger: false,
