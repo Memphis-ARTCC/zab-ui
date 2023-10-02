@@ -257,7 +257,7 @@ const routes = [
       {
         path: "training/new",
         beforeEnter() {
-          location.href = "https://memphisartcc.setmore.com";
+          window.location.replace("https://memphisartcc.setmore.com");
         },
       },
       {
