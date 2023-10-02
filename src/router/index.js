@@ -257,6 +257,7 @@ const routes = [
       {
         path: "training/new",
         beforeEnter() {
+          console.log("Redirecting to Setmore")
           window.location.replace("https://memphisartcc.setmore.com");
         },
       },
