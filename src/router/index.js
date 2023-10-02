@@ -256,7 +256,9 @@ const routes = [
       },
       {
         path: "training/new",
-        component: () => import("../views/dashboard/training/Index.vue"),
+        beforeEnter() {
+          location.href = uriHelper.setmore;
+        },
       },
       {
         path: "training/session/:id",
