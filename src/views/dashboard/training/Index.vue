@@ -2,7 +2,9 @@
 	<div class="card">
 		<div class="card-content">
 			<div class="row row_no_margin">
-				<div class="col s4"><router-link to="/dash/training/new"><span class="btn new_event_button center">Request Training</span></router-link></div>
+				<div class="col s4">
+					<a href="https://memphisartcc.setmore.com" target="_blank" class="btn center">Request Training</a>
+				</div>
 			</div>
 		</div>
 	</div>

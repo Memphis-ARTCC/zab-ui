@@ -255,12 +255,6 @@ const routes = [
         component: () => import("../views/dashboard/training/Index.vue"),
       },
       {
-        path: "training/new",
-        beforeEnter() {
-          location.href = uriHelper.setmore;
-        },
-      },
-      {
         path: "training/session/:id",
         component: () => import("../views/dashboard/training/Request.vue"),
       },
