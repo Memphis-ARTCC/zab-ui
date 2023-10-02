@@ -256,14 +256,11 @@ const routes = [
       },
       {
         path: "training/new",
-        beforeEnter() {
-          console.log("Redirecting to Setmore")
-          window.location.replace("https://memphisartcc.setmore.com");
-        },
+        component: () => import("../views/dashboard/training/Index.vue"),
       },
       {
         path: "training/session/:id",
-        component: () => import("../views/dashboard/training/ViewSession.vue"),
+        component: () => import("../views/dashboard/training/Request.vue"),
       },
     ],
   },
