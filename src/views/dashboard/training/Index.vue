@@ -2,7 +2,13 @@
 	<div class="card">
 		<div class="card-content">
 			<div class="row row_no_margin">
-				<div class="card-title col s8"><span class="card-title"><a src="https://memphisartcc.setmore.com/" target="_blank"><span class="btn">Request Training</span></a></span></div>
+				<div class="card-title col s8">
+					<span class="card-title">
+						<a src="https://memphisartcc.setmore.com/" target="_blank" class="btn">
+							Request Training
+						</a>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
