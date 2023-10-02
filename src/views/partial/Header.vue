@@ -194,7 +194,7 @@ import { vatsimAuthRedirectUrl } from "@/helpers/uriHelper.js";
 export default {
   data() {
     return {
-      number: 0,
+      number: 1,
       unread: false,
     };
   },
