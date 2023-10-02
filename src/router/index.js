@@ -115,14 +115,6 @@ const routes = [
         path: "solo/new",
         component: () => import("../views/instructor/solocerts/New.vue"),
       },
-      // {
-      //   path: "training/requests",
-      //   component: () => import("../views/instructor/training/Requests.vue"),
-      // },
-      // {
-      //   path: "training/requests/:date",
-      //   component: () => import("../views/instructor/training/Day.vue"),
-      // },
       {
         path: "training/sessions",
         component: () => import("../views/instructor/training/Sessions.vue"),
@@ -264,7 +256,9 @@ const routes = [
       },
       {
         path: "training/new",
-        component: () => import("../views/dashboard/training/Request.vue"),
+        beforeEnter() {
+          location.href = "https://memphisartcc.setmore.com";
+        },
       },
       {
         path: "training/session/:id",
