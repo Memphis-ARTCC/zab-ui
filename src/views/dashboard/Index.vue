@@ -10,9 +10,6 @@
 					<span>
 						You have controlled for <b>{{ hoursCalc }}</b> in the past 30 days.
 					</span>
-					<span v-if="user.data.rating !== 1">
-						You will need to control again by <b>{{ calcControlDate }}</b> to prevent removal from the roster.
-					</span>
 				</div>
 				<span class="section_title">
 					External Integrations
