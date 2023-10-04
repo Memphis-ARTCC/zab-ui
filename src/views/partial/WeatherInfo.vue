@@ -2,7 +2,6 @@
 	<div class="card">
 		<div class="card-content">
 			<span class="card-title">Current Weather</span>
-			<p>The runways listed here are suggestions. If there is a controller online, they may be using different runways than those listed here. Please always check with the controller's ATIS prior to planning your runways.</p>
 		</div>
 		<div class="table_overflow_wrapper" v-if="numStationsLoaded === Object.keys(stations).length" >
 			<table class="striped compact">
