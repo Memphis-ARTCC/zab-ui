@@ -89,6 +89,8 @@ export default {
 		Chart.register(...registerables);
 		const {data: statsData} = await zabApi.get('/stats/admin');
 		this.stats = statsData.data;
+		let date = new Date();
+		let label = `${date.getUTCDate()} ${date.getUTCFullYear()}`
 		this.$nextTick(() => {
 			M.Tooltip.init(document.querySelectorAll('.tooltipped'), {
 				margin: 0
@@ -96,7 +98,7 @@ export default {
 			new Chart(this.$refs.feedback_chart, {
 				type: 'line',
 				data: {
-					labels: this.stats?.feedback?.map(f => `${f.month} ${f.year}`),
+					labels: this.stats?.feedback?.map(f => `${f.month} ${f.year}`) ?? label,
 					datasets: [{
 						label: "Feedback Submitted",
 						data: this.stats?.feedback?.map(f => f.total),
@@ -115,10 +117,10 @@ export default {
 			new Chart(this.$refs.hours_chart, {
 				type: 'line',
 				data: {
-					labels: this.stats.hours.map(f => `${f.month} ${f.year}`),
+					labels: this.stats?.hours?.map(f => `${f.month} ${f.year}`) ?? label,
 					datasets: [{
 						label: "Total Hours",
-						data: this.stats.hours.map(h => Math.round(h.total/60/60*100)/100),
+						data: this.stats?.hours?.map(h => Math.round(h.total/60/60*100)/100) ?? 0,
 						borderColor: '#ed5c30',
 						tension: 0.3
 					}]
@@ -134,10 +136,10 @@ export default {
 			new Chart(this.$refs.distb_chart, {
 				type: 'bar',
 				data: {
-					labels: this.stats.counts.byRating.map(f => f.rating),
+					labels: this.stats?.counts?.byRating.map(f => f.rating) ?? "",
 					datasets: [{
 						label: "Number of Controllers",
-						data: this.stats.counts.byRating.map(f => f.count),
+						data: this.stats?.counts?.byRating.map(f => f.count) ?? 0,
 						backgroundColor: '#ed5c30',
 					}]
 				},
