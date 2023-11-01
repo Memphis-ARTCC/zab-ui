@@ -96,10 +96,10 @@ export default {
 			new Chart(this.$refs.feedback_chart, {
 				type: 'line',
 				data: {
-					labels: this.stats.feedback.map(f => `${f.month} ${f.year}`),
+					labels: this.stats?.feedback?.map(f => `${f.month} ${f.year}`),
 					datasets: [{
 						label: "Feedback Submitted",
-						data: this.stats.feedback.map(f => f.total),
+						data: this.stats?.feedback?.map(f => f.total),
 						borderColor: '#ed5c30',
 						tension: 0.3
 					}]
