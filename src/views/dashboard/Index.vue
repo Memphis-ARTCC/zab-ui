@@ -8,7 +8,7 @@
 			<div v-else>
 				<div class="hours_info">
 					<span>
-						You have controlled for <b>{{ hoursCalc }}</b> in the past 30 days.
+						You have controlled for <b>{{ hoursCalc }}</b> in the past 90 days.
 					</span>
 				</div>
 				<span class="section_title">
