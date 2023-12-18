@@ -103,7 +103,7 @@ export default {
 		hoursCalc() {
 			let seconds = 0;
 			for(const session of this.controllingSessions) {
-				if((Math.abs(new Date().getTime() - new Date(session.timeEnd).getTime()) / (1000 * 60 * 60 * 24) < 31)) {
+				if((Math.abs(new Date().getTime() - new Date(session.timeEnd).getTime()) / (1000 * 60 * 60 * 24) < 91)) {
 					const newSeconds = (new Date(session.timeEnd) - new Date(session.timeStart)) / 1000;
 					seconds += newSeconds;
 				}

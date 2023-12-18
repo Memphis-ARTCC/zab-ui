@@ -43,32 +43,32 @@
 								id="memapp" 
 								:class="{active: form.certs.memapp}" 
 								class="cert cert_major" 
-								@click="toggleCert">Major Approach</span>
+								@click="toggleCert">Tier 2 Approach</span>
 							<span 
 								id="memtwr" 
 								:class="{active: form.certs.memtwr}" 
 								class="cert cert_major" 
-								@click="toggleCert">Major Tower</span>
+								@click="toggleCert">Tier 2 Tower</span>
 							<span 
 								id="memgnd" 
 								:class="{active: form.certs.memgnd}" 
 								class="cert cert_major" 
-								@click="toggleCert">Major Ground</span>
+								@click="toggleCert">Tier 2 Ground</span>
 							<span 
 								id="app" 
 								:class="{active: form.certs.app}" 
 								class="cert cert_minor" 
-								@click="toggleCert">Minor Approach</span>
+								@click="toggleCert">Unrestricted Approach</span>
 							<span 
 								id="twr" 
 								:class="{active: form.certs.twr}" 
 								class="cert cert_minor" 
-								@click="toggleCert">Minor Tower</span>
+								@click="toggleCert">Unrestricted Tower</span>
 							<span 
 								id="gnd" 
 								:class="{active: form.certs.gnd}" 
 								class="cert cert_minor" 
-								@click="toggleCert">Minor Ground</span>
+								@click="toggleCert">Unrestricted Ground</span>
 						</div>
 					</div>
 					<div class="input-field col s12">
