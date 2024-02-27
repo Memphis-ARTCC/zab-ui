@@ -14,9 +14,9 @@
 						<div class="col s12 input-field">
 							<select v-model="form.cid" required class="materialize-select">
 								<option value="" disabled selected>Select a controller</option>
-								<option v-for="controller in controllers" :value="controller.cid" :key="controller.cid">{{ controller.fname }} {{ controller.lname }}</option>
+								<option v-for="controller in controllers" :value="controller.cid" :key="controller.cid">{{ controller.fname }} {{ controller.lname }} - {{ controller.cid }}</option>
 							</select>
-							<label>Controller - {{ controller.cid }}</label>
+							<label>Controller</label>
 						</div>
 						<div class="col s12 input-field">
 							<input id="position" type="text" minlength=7 maxlength=7 class="validate" placeholder="MEM_APP" v-model="form.position" required>
