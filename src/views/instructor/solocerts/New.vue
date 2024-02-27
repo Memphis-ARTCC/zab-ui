@@ -73,7 +73,7 @@ export default {
 	methods: {
 		async getControllers() {
 			const { data } = await zabApi.get('/feedback/controllers');
-			this.controllers = data.data.filter((c) => c.rating > 2 && c.vis == false);
+			this.controllers = data.data;
 		},
 		async submitCert() {
 			try {
