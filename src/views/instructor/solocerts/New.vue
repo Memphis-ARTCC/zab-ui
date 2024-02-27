@@ -16,7 +16,7 @@
 								<option value="" disabled selected>Select a controller</option>
 								<option v-for="controller in controllers" :value="controller.cid" :key="controller.cid">{{ controller.fname }} {{ controller.lname }}</option>
 							</select>
-							<label>Controller</label>
+							<label>Controller - {{ controller.cid }}</label>
 						</div>
 						<div class="col s12 input-field">
 							<input id="position" type="text" minlength=7 maxlength=7 class="validate" placeholder="MEM_APP" v-model="form.position" required>
